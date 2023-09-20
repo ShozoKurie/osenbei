@@ -1,24 +1,76 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| nickname           | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| age                | int    |             |
+| region             | int    |             |
+| self_introduction  | text   |             |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :reviews
+- has_many :tweets 
+- has_many :comments
 
-* Configuration
 
-* Database creation
+## items テーブル
 
-* Database initialization
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| item_name          | string | null: false |
+| maker              | string | null: false |
+| region_id          | int    |             |
+| url                | text   |             |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_many :reviews
+- has_many :tweets 
 
-* Deployment instructions
+## reviews テーブル
 
-* ...
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| salty_id           | integer | null: false |
+| sweet_id           | integer | null: false |
+| crispy_id          | integer | null: false |
+| spicy_id           | integer | null: false |
+| unique_id          | integer | null: false |
+| review_comment     | text    |             |
+
+### Association
+
+- belongs_to :user
+- belongs_to :item
+- has_many :tweets 
+
+
+## tweets テーブル
+
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| report             | text    | null: false |
+
+### Association
+
+- belongs_to :item
+- belongs_to :user
+- has_many :comments
+
+
+## comments テーブル
+
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| comment            | text    | null: false |
+
+### Association
+
+- belongs_to : tweet
+- belongs_to : user
+
