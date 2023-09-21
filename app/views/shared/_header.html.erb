@@ -5,9 +5,14 @@
     </h1>
     <nav id="navi">
       <ul class="nav-menu">
+      <% unless user_signed_in? %>
         <li><%=link_to new_user_registration_path do%><span>会員</span>になる<% end %></li>
-        <li><%=link_to url:"#" do%><span>暖簾</span>をくぐる<% end %></li>
-        <li><%=link_to url:"#" do%>あなたの<span>頁</span><% end %> </li>
+        <li><%=link_to new_user_session do%><span>暖簾</span>をくぐる<% end %></li>
+      <% end %>
+      <% if user_signed_in? %>
+        <li><%=link_to url:"#" do%>あなたの<span>頁</span><% end %></li>
+        <li><%=link_to destroy_user_session, data: { turbo_method: :delete } do%>おいとまする<% end %></li>
+      <% end %>
       </ul>
     </nav>
   </div>
