@@ -7,7 +7,7 @@
 | nickname           | string | null: false |
 | email              | string | null: false |
 | encrypted_password | string | null: false |
-| age                | integer|             |
+| birthday           | date   |             |
 | region_id          | integer|             |
 | self_introduction  | text   |             |
 

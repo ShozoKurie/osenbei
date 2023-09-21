@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_031237) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.integer "age"
+    t.date "birthday"
     t.integer "region"
     t.text "self_introduction"
     t.string "reset_password_token"
