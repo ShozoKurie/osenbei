@@ -1,0 +1,41 @@
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.header_links {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Hannari";
+  align-items: flex-end;
+  padding-top: 20px;
+}
+.site-title {
+  font-size: 50px;
+}
+#navi {
+  width: 450px;
+  color: darkblue;
+  transition: all 0.5s;
+  z-index: 20;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+#navi span {
+  font-family: serif;
+  font-weight: lighter;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+#navi a {
+  color: darkred;
+}
+#navi li {
+  border-bottom: double 2px  darkblue;
+  font-size: 20px;
+}
+
+.underline {
+  width: 100%;
+}
