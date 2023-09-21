@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:item_name, :maker, :region_id, :url, :item_image)
+    params.require(:item).permit(:item_name, :maker, :region_id, :url)
   end
 
   # def set_item
@@ -32,20 +32,6 @@ class ItemsController < ApplicationController
   # end
 
 end
-
-
-
-
-
-def show
-end
-
-def edit
-end
-
-private
-
-
 
 # def shut_other_users
 #   if current_user != @item.user
