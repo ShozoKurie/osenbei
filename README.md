@@ -7,8 +7,8 @@
 | nickname           | string | null: false |
 | email              | string | null: false |
 | encrypted_password | string | null: false |
-| age                | int    |             |
-| region             | int    |             |
+| age                | integer|             |
+| region_id          | integer|             |
 | self_introduction  | text   |             |
 
 ### Association
@@ -24,7 +24,7 @@
 | ------------------ | ------ | ----------- |
 | item_name          | string | null: false |
 | maker              | string | null: false |
-| region_id          | int    |             |
+| region_id          | integer|             |
 | url                | text   |             |
 
 ### Association
