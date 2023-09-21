@@ -39,13 +39,13 @@
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
   </div>
-  <div class="form-group">
+  <%# <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">お住まい</label>
       <span class="indispensable">任意</span>
     </div>
-    <%#= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
-  </div>
+    <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+  <%# </div> %>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">生年月日</label>
