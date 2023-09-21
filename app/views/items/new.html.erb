@@ -1,0 +1,48 @@
+<%= render "shared/header"%>
+
+<%= form_with model: @item, class: 'registration-main', local: true do |f| %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      製品情報入力
+    </h1>
+  </div>
+
+  <%#= render 'shared/error_messages', model: f.object, locals: {resource: @user} %>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">おせんべいの名前</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :item_name, class:"input-default", id:"item_name", placeholder:"正確な名前でのご登録にご協力ください。" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メーカーの名前</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :maker, class:"input-default", id:"maker", placeholder:"正確な名前でのご登録にご協力ください。", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">製品ページのURL</label>
+      <span class="indispensable">任意</span>
+    </div>
+    <%= f.text_field :url, class:"input-default", id:"url", placeholder:"製品の公式ページがあれば、添付お願いします。", autofocus: true %>
+  </div>
+
+  <%# <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">生産地</label>
+      <span class="indispensable">任意</span>
+    </div>
+    <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+  <%# </div> %>
+  <div class='register-btn'>
+    <%= f.submit "製品登録" ,class:"register-red-btn" %>
+  </div>
+</div>
+<% end %>
+
+<%= render "shared/footer"%>
