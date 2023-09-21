@@ -1,8 +1,41 @@
 <%= render "shared/header" %>
-
-<div id="top" class="wrapper">
-  <ul class="product-list">
-
+<div class="create-item" class="serif">
+  <%= image_tag 'salad_senbei.png'%>
+  <%=link_to new_item_path do%>新しくおせんべいを登録<% end %>
+  <%= image_tag 'seawead_okaki.png'%>
+</div>
+<div class="wrapper">
+  <ul class='item-lists'>
+    <% @items.each do |item|%>
+      <li class='list'>
+        <%#= link_to item_path(item.id) do %>
+        <div class='item-img-content'>
+          <% if @newest_img == nil %>
+          <%= image_tag "senbei-mix.png", class: "item-img" %>
+          <% else %>
+          <%= image_tag @newest_img, class: "item-img" %>
+          <% end %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            品名:<%= item.item_name %>
+          </h3>
+          <div class='item-maker'>
+            <span>メーカー:<%= item.maker %><br><%#= item.region %></span>
+          </div>
+          <div class="taste-reviews">
+            <ul>
+              <li>塩:</li>
+              <li>甘:</li>
+              <li>香:</li>
+              <li>固:</li>
+              <li>独:</li>
+              <li>地:</li>
+            </ul>
+        </div>
+        <%# end %>
+      </li>
+    <% end %>
   </ul>
 </div>
 

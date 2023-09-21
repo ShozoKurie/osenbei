@@ -1,122 +1,44 @@
 
 /*-------------------------------------------
-TOP、PRODUCTS
--------------------------------------------*/
-#top {
-  padding-top: 80px;
-  padding-bottom: 160px;
-}
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.product-list li {
-  width: 23%;
-  margin-bottom: 40px;
-}
-/*
-vertical-align: top;
-画像の下にできる隙間を消す
-*/
-.product-list img {
-  margin-bottom: 10px;
-  vertical-align: top;
-}
-.product-list p {
-  font-size: 0.75rem;
-}
-.link-text {
-  display: block;
-  text-align: center;
-}
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-.pagination li {
-  padding: 0 20px;
-}
-
-/*-------------------------------------------
 ITEM
 -------------------------------------------*/
-#item {
-  max-width: 800px;
+.create-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  border-bottom: 1px double darkgreen;
+  width: 350px;
+  height: 30px;
+  font-size: 20px;
+  margin: 0 auto;
+  font-family: serif;
 }
-#item .item-text {
-  width: 42%;
+.create-item img {
+  object-fit: cover;
 }
-/*
-text-align: justify;
-テキストの両端を揃える
-*/
-#item .item-text p {
-  margin-bottom: 30px;
-  text-align: justify;
+.create-item a {
+  margin: 0 10px;
 }
-#item .item-text dl {
+.item-lists {
+  display: flex;
+}
+.list {
+  width: 30%;
+  background-image: url(item_bcg.png);
+  background-size: cover;
+  height: 120px;
+  display: flex;
+}
+.item-img-content {
+  width: 150px;
+}
+.item-img {
+  object-fit: cover;
+}
+.item-info {
+  font-size: 15px;
+  padding: 10px;
+}
+.taste-reviews ul{
   display: flex;
   flex-wrap: wrap;
-}
-#item .item-text dt {
-  width: 30%;
-}
-#item .item-text dd {
-  width: 70%;
-}
-#item .item-img {
-  width: 50%;
-}
-
-/*-------------------------------------------
-ABOUT
--------------------------------------------*/
-#about {
-  max-width: 600px;
-}
-#about p {
-  line-height: 1.9;
-  margin-bottom: 30px;
-}
-
-/*-------------------------------------------
-COMPANY
--------------------------------------------*/
-#company {
-  max-width: 600px;
-}
-#company dl {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-#company dt {
-  width: 30%;
-  border-bottom: solid 1px #dcdbdb;
-  padding: 20px 10px;
-}
-#company dt:last-of-type {
-  border-bottom: none;
-}
-#company dd {
-  width: 70%;
-  border-bottom: solid 1px #dcdbdb;
-  padding: 20px 10px;
-}
-#company dd:last-of-type {
-  border-bottom: none;
-}
-#company .map {
-  /* グーグルマップをグレースケールにする */
-  filter: grayscale(1);
-}
-/* グーグルマップのサイズを設定 */
-#company .map iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
 }
