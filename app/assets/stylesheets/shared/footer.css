@@ -1,0 +1,16 @@
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+
+#footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+#footer .copyright {
+  text-align: center;
+  font-size: 0.825rem;
+  font-family: "Hannari";
+}

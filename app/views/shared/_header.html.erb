@@ -1,0 +1,16 @@
+<header id="header" class="wrapper">
+  <div class="header_links">
+    <h1 class="site-title">
+      <%=link_to "おせんべいたべよ。", root_path %>
+    </h1>
+    <nav id="navi">
+      <ul class="nav-menu">
+        <li><%=link_to url:"#" do%><span>暖簾</span>をくぐる<% end %></li>
+        <li><%=link_to url:"#" do%><span>会員</span>になる<% end %></li>
+        <li><%=link_to url:"#" do%>あなたの<span>頁</span><% end %> </li>
+      </ul>
+    </nav>
+  </div>
+  <%= image_tag 'navy_green_pink.png', alt: 'line' %>
+  <div id="mask"></div>
+</header>

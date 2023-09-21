@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-image: url('osenbei-bcg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+a:hover {
+  opacity: 0.7;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+/*
+コンテンツ幅を設定するための共通クラス
+*/
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
