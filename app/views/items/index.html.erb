@@ -16,7 +16,7 @@
       <li class='list bg-img2'>
       <% end %>
       <% i += 1 %>
-        <%#= link_to item_path(item.id) do %>
+        <%= link_to item_path(item.id) do %>
         <div class='item-img-content'>
           <% if @newest_img == nil %>
           <%= image_tag "senbei-mix.png", class: "item-img" %>
@@ -41,7 +41,7 @@
               <li>地:</li>
             </ul>
         </div>
-        <%# end %>
+        <% end %>
       </li>
     <% end %>
   </ul>

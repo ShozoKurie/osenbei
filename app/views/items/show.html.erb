@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+<div class="create-item" class="serif">
+  <%= image_tag 'salad_senbei.png'%>
+  <%=link_to "#" do%>このおせんべいの感想を書く<% end %>
+  <%= image_tag 'seawead_okaki.png'%>
+</div>
+<div class="wrapper">
+  <div class='show-item'>
+    <div class='item-img-content'>
+      <% if @newest_img == nil %>
+        <%= image_tag "senbei-mix.png", class: "item-img" %>
+      <% else %>
+      <%= image_tag @newest_img, class: "item-img" %>
+      <% end %>
+    </div>
+    <div class='item-info'>
+      <h3 class='item-name'>
+        <%= @item.item_name %>
+      </h3>
+      <div class='item-maker'>
+        <span>メーカー　 : <%= @item.maker %><br><%#= @item.region %></span>
+      </div>
+      <div class="taste-reviews">
+        <ul>
+          <li>しょっぱさ : </li>
+          <li>甘さ　　　 : </li>
+          <li>スパイス感 : </li>
+          <li>固さ　　　 : </li>
+          <li>ユーモア性 : </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+  
+
+<%= render "shared/footer" %>

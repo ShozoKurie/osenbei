@@ -1,0 +1,27 @@
+.show-item {
+  background-color: rgb(151, 151, 202);
+  width: 60%;
+  margin: 20px auto;
+}
+.show-item {
+  display: flex;
+}
+.show-item .item-img-content {
+  width: 400px;
+  height: 350px;
+  background-color: brown;
+}
+.show-item .item-img-content img {
+  width: 400px;
+  height: 350px;
+}
+.show-item .item-info {
+  font-size: 20px;
+  margin: 5px;
+}
+.show-item .item-name {
+  font-size: 25px;
+}
+.show-item .taste-reviews ul{
+  flex-direction: column;
+}
