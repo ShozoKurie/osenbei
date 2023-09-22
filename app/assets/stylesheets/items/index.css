@@ -20,13 +20,25 @@ ITEM
 }
 .item-lists {
   display: flex;
+  justify-content: space-between;
 }
 .list {
   width: 30%;
-  background-image: url(item_bcg.png);
-  background-size: cover;
   height: 120px;
   display: flex;
+  margin: 10px;
+}
+.bg-img {
+  background-image: url(item_bcg.png);
+  background-size: cover;
+}
+.bg-img1 {
+  background-image: url(item_bcg1.png);
+  background-size: cover;
+}
+.bg-img2 {
+  background-image: url(item_bcg2.png);
+  background-size: cover;
 }
 .item-img-content {
   width: 150px;
@@ -35,8 +47,12 @@ ITEM
   object-fit: cover;
 }
 .item-info {
-  font-size: 15px;
+  font-size: 13px;
   padding: 10px;
+}
+.item-name {
+  font-size: 15px;
+  font-weight: bold;
 }
 .taste-reviews ul{
   display: flex;
